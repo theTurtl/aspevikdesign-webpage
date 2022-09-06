@@ -138,7 +138,11 @@ section {
 	border-radius: 16px 0px 16px 16px;
 	height: max-content;
   font-size: 20px;
+}
 
+.biggerProjects:hover {
+  cursor: pointer;
+  animation: scaler 0.25s forwards;
 }
 
 .arriveSoon {
@@ -222,10 +226,19 @@ section {
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100%;
+	width: 176px;
 	height: 176px;
   bottom: -88px;
+  left: 50%;
+  border-radius: 88px;
+  transform: translateX(-50%);
   filter: drop-shadow(0px 0px 32px var(--blackopacity));
+}
+
+.nextButton:hover {
+  cursor: pointer;
+  filter: brightness(-50%);
+  animation: scaler 0.25s forwards;
 }
 
 .garanti {
@@ -240,11 +253,28 @@ section {
   bottom: -80px;
 }
 
+.garanti:hover {
+  cursor: pointer;
+  animation: scaler 0.25s forwards;
+}
+
 .nextArrow {
-  /*background-image: url('/src/images/100garanti.svg');*/
+  position: relative;
+  background-image: url('/src/images/nextArrow.svg');
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
+  width: 100%;
+  height: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: arrowAnimation 1s forwards infinite ease-in-out alternate;
+}
+
+@keyframes arrowAnimation {
+  0% {margin-top: 0px;}
+  50% {margin-top: 4px;}
+  100% {margin-top: 0px;}
 }
 
 .introText {
@@ -273,7 +303,6 @@ section {
   background-color: var(--white);
   max-width: 650px;
   border-radius: 26px 100px 100px 48px;
-  
 }
 
 .introAboutMe:hover {
@@ -283,7 +312,7 @@ section {
 
 @keyframes scaler {
   0% {scale: 1;}
-  100% {scale: 1.02;}
+  100% {scale: 1.02; filter: drop-shadow(0px 0px 12px var(--blackopacity));}
 }
 
 @keyframes rotater {
