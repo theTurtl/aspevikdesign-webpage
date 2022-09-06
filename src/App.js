@@ -58,6 +58,22 @@ function App() {
         </div>
       </section>
 
+
+      <section className="slideshowSection">
+        <div className="slideshowView">
+          <div className="slideshowHeader">
+            <div className="logo"></div>
+            <div className="slideshowContact">
+              <p>Kontakt</p>
+              <div className="contactLine"></div>
+            </div>
+          </div>
+          <div className="slideshowContent">
+            <p>Skap<br/>engasjement.</p>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
