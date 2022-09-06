@@ -70,6 +70,7 @@ function App() {
           </div>
           <div className="slideshowContent">
             <p>Skap<br/>engasjement.</p>
+            <p>tester</p>
           </div>
         </div>
       </section>
