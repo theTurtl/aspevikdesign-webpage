@@ -220,6 +220,7 @@ section {
 	height: max-content;
   width: 100%;
   margin: auto;
+  
 }
 
 .nextButton {
@@ -235,6 +236,7 @@ section {
   border-radius: 88px;
   transform: translateX(-50%);
   filter: drop-shadow(0px 0px 32px var(--blackopacity));
+  
 }
 
 .nextButton:hover {
