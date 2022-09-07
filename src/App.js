@@ -1,5 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useRef } from 'react';
+import ReactDOM from 'react-dom';
+import VanillaTilt from 'vanilla-tilt';
+
+function Tilt(props) {
+  const { options, ...rest } = props;
+  const tilt = useRef(null);
+
+  useEffect(() => {
+    VanillaTilt.init(tilt.current, options);
+  }, [options]);
+
+  return <div ref={tilt} {...rest} />;
+}
+
+const options = {
+  scale: 1.01,
+  speed: 100,
+  max: 1,
+  reverse: true,
+  reset: true,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+};
+
+const optionsSmallTilt = {
+  scale: 1.01,
+  speed: 500,
+  max: 1,
+  reverse: true
+}
+
+const optionsMediumTilt = {
+  scale: 1.001,
+  speed: 8000,
+  max: 1,
+  reverse: false,
+  reset: true,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+}
+
 
 function App() {
   return (
@@ -10,8 +50,8 @@ function App() {
       <section className='introSection'>
         <div className='navBar'>
           <div className='leftContainer'>
-            <div className='logo'></div>
-            <div className='statusBar'>Hyggelig å treffe deg! :)</div>
+            <Tilt options={optionsSmallTilt} className='logo'></Tilt>
+            <Tilt className='statusBar' options={options}>Hyggelig å treffe deg! :)</Tilt>
           </div>
           <div className='rightContainer'>
             <div className='biggerProjects'>
@@ -28,14 +68,14 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='introBanner'>
+        <Tilt className='introBanner' options={options}>
           <div className='introContainer'>
-            <div className="introText">
+            <Tilt className="introText" options={optionsMediumTilt}>
               <p>Design</p>
               <p>Web- og apputvikling</p>
               <p>Brandutvikling</p>
-            </div>
-            <div className="introAboutMe">
+            </Tilt>
+            <Tilt className="introAboutMe" options={optionsSmallTilt}>
               <div className="aboutMeContainer">
                 <p>Jeg er 26 år, og er en designer og utvikler 
                   basert i Bergen. Min største interesse er å 
@@ -49,13 +89,13 @@ function App() {
                 </div>
               </div>
               
-            </div>
+            </Tilt>
             <div className="garanti"></div>
             <div className='nextButton'>
               <div className="nextArrow"></div>
             </div>
           </div>
-        </div>
+        </Tilt>
       </section>
 
 
@@ -78,7 +118,7 @@ function App() {
       <section className="myServiceSection">
         <div className="serviceView">
           <div className="serviceTextView">
-            <h7>Mine<br/>tjenester</h7>
+            <h6>Mine<br/>tjenester</h6>
             <div className="servicesDescription">
               <p>Jeg tilbyr flere tjenester innen 
                   frontent- og mobilutvikling, visuell 

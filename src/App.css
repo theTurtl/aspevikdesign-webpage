@@ -471,7 +471,7 @@ section {
 
 
 
-.serviceTextView h7 {
+.serviceTextView h6 {
   font-size: 80px;
   font-weight: 800;
   color: var(--black);
@@ -497,3 +497,4 @@ section {
   border-radius: 64px;
   flex: 70%;
 }
+
