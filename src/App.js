@@ -16,7 +16,7 @@ function Tilt(props) {
 }
 
 const options = {
-  scale: 1.01,
+  scale: 1.001,
   speed: 100,
   max: 1,
   reverse: true,
@@ -32,8 +32,8 @@ const optionsSmallTilt = {
 }
 
 const optionsMediumTilt = {
-  scale: 1.001,
-  speed: 8000,
+  scale: 1.01,
+  speed: 10000,
   max: 1,
   reverse: false,
   reset: true,
