@@ -59,6 +59,7 @@ table {
 
 :root {
 	--white: #F6F1F0;
+  --gray: #EAE5E5;
 	--black: #0D1B1E;
   --blackopacity: #0D1B1E30;
 	--red: #FF6666;
@@ -438,4 +439,61 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.myServiceSection {
+  position: relative;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.serviceView {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 128px;
+  transform: translate(-50%, -50%);
+  background-color: var(--gray);
+  border-radius: 128px;
+  display: flex;
+  margin: auto;
+
+}
+
+.serviceTextView {
+  margin-top: 112px;
+  height: 100%;
+  position: relative;
+  flex: 40%;
+
+}
+
+
+
+
+.serviceTextView h7 {
+  font-size: 80px;
+  font-weight: 800;
+  color: var(--black);
+}
+
+.servicesDescription {
+  margin-top: 48px;
+  width: 300px;
+  background-color: var(--black);
+  padding: 32px;
+  border-radius: 32px;
+  font-size: 20px;
+  color: var(--white);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.servicesGraphic {
+  height: 600px;
+  width: 600px;
+  margin-left: 160px;
+  border: 1px solid var(--black);
+  border-radius: 64px;
+  flex: 70%;
 }

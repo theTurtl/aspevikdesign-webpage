@@ -75,6 +75,23 @@ function App() {
         </div>
       </section>
 
+      <section className="myServiceSection">
+        <div className="serviceView">
+          <div className="serviceTextView">
+            <h7>Mine<br/>tjenester</h7>
+            <div className="servicesDescription">
+              <p>Jeg tilbyr flere tjenester innen 
+                  frontent- og mobilutvikling, visuell 
+                  kommunikasjon, samt produkt- og brandutvikling.
+              </p>
+            </div>
+          </div>
+          <div className="servicesGraphic">
+
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
