@@ -101,16 +101,15 @@ function App() {
 
       <section className="slideshowSection">
         <div className="slideshowView">
-          <div className="slideshowHeader">
+          {/*<div className="slideshowHeader">
             <div className="logo"></div>
             <div className="slideshowContact">
               <p>Kontakt</p>
               <div className="contactLine"></div>
             </div>
-          </div>
+  </div>*/}
           <div className="slideshowContent">
             <p>Skap<br/>engasjement.</p>
-            <p>tester</p>
           </div>
         </div>
       </section>
@@ -131,6 +130,10 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/*<div className='contactSlider'>
+        <p>Kontakt</p>
+</div>*/}
 
     </div>
   );
