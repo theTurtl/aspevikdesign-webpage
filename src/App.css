@@ -81,9 +81,9 @@ table {
 	height: 100vh;
 }
 
-section {
+/*section {
 	scroll-snap-align: start;
-}
+}*/
 
 .introSection {
 	position: relative;
@@ -389,16 +389,21 @@ section {
 }
 
 
-.slideshowSection {
+/*.slideshowSection {
   position: relative;
   height: 100vh;
   background-color: var(--black);
   
   scroll-snap-align: start;
   
+}*/
+
+.slideshowSection {
+  padding: 100px 0px;
+  background-color: var(--black);
 }
 
-.slideshowView {
+/*.slideshowView {
   position: absolute;
   background-color: var(--yellow);
   top: 0;
@@ -408,6 +413,13 @@ section {
   margin: 64px;
   border-radius: 64px;
   padding: 64px;
+}*/
+
+.slideshowView {
+  position: sticky;
+  top: 100px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .slideshowHeader {
@@ -423,7 +435,7 @@ section {
   font-weight: 600;
 }
 
-.slideshowContent {
+/*.slideshowContent {
   position: absolute;
   width: max-content;
   scroll-snap-type: x mandatory;
@@ -432,6 +444,21 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}*/
+
+.slideshowContent {
+  position: relative;
+  display: flex;
+}
+
+.slideshowElement {
+  width: 500px;
+  height: 400px;
+  background-color: purple;
+  margin: 0 0px 0 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-shrink: 0;
 }
 
 .slideshowContent p {

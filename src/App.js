@@ -4,6 +4,26 @@ import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import VanillaTilt from 'vanilla-tilt';
 
+
+var windowWidth = window.innerWidth;
+
+var horLength = document.querySelector(".slideshowContent").scrollWidth;
+
+var distFromTop = document.querySelector(".slideshowSection").offsetTop;
+
+var scrollDistance = distFromTop + horLength - windowWidth;
+
+document.querySelector(".slideshowSection").style.height = horLength + "px";
+
+window.onscroll = function(){
+  var scrollTop = window.pageYOffset;
+  
+  if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
+    document.querySelector(".slideshowContent").style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
+  }
+  
+}
+
 function Tilt(props) {
   const { options, ...rest } = props;
   const tilt = useRef(null);
@@ -39,6 +59,8 @@ const optionsMediumTilt = {
   reset: true,
   easing: "cubic-bezier(.03,.98,.52,.99)",
 }
+
+
 
 
 function App() {
@@ -109,7 +131,24 @@ function App() {
             </div>
   </div>*/}
           <div className="slideshowContent">
-            <p>Skap<br/>engasjement.</p>
+            <div className='slideshowElement'>
+              <p>Skap<br/>engasjement.</p>
+            </div>
+            <div className='slideshowElement'>
+              <p>Skap<br/>engasjement.</p>
+            </div>
+            <div className='slideshowElement'>
+              <p>Skap<br/>engasjement.</p>
+            </div>
+            <div className='slideshowElement'>
+              <p>Skap<br/>engasjement.</p>
+            </div>
+            <div className='slideshowElement'>
+              <p>Skap<br/>engasjement.</p>
+            </div>
+            <div className='slideshowElement'>
+              <p>Skap<br/>engasjement.</p>
+            </div>
           </div>
         </div>
       </section>
