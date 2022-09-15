@@ -5,24 +5,7 @@ import ReactDOM from 'react-dom';
 import VanillaTilt from 'vanilla-tilt';
 
 
-var windowWidth = window.innerWidth;
 
-var horLength = document.querySelector(".slideshowContent").scrollWidth;
-
-var distFromTop = document.querySelector(".slideshowSection").offsetTop;
-
-var scrollDistance = distFromTop + horLength - windowWidth;
-
-document.querySelector(".slideshowSection").style.height = horLength + "px";
-
-window.onscroll = function(){
-  var scrollTop = window.pageYOffset;
-  
-  if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
-    document.querySelector(".slideshowContent").style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
-  }
-  
-}
 
 function Tilt(props) {
   const { options, ...rest } = props;

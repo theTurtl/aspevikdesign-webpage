@@ -88,6 +88,7 @@ table {
 .introSection {
 	position: relative;
 	height: 100vh;
+  min-height: max-content;
 	padding: 0px 80px;
 }
 
@@ -211,6 +212,7 @@ table {
 	min-height: 480px;
 	max-width: 2000px;
   margin: auto;
+  margin-bottom: 128px;
 }
 
 .introContainer {
@@ -312,6 +314,7 @@ table {
 .introAboutMe:hover {
   animation: scaler 0.25s forwards;
   cursor: pointer;
+  
 }
 
 @keyframes scaler {
